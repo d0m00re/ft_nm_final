@@ -6,7 +6,7 @@
 /*   By: alhelson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 19:18:54 by alhelson          #+#    #+#             */
-/*   Updated: 2018/04/02 19:20:46 by alhelson         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:31:32 by alhelson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,18 +80,20 @@ void					nm(char *str, char *name_file, unsigned int size);
 ** for 64
 */
 
-char                                            *check_if_own_archi_64(t_univ_bin *univ, int rev,\
+char					*check_if_own_archi_64(t_univ_bin *univ, int rev,\
 uint32_t *size_sub, uint32_t size);
 
-void					univ_bin_load_data_64(t_univ_bin *univ, char *ptr, char *name, int rev);
+void					univ_bin_load_data_64(t_univ_bin *univ,\
+		char *ptr, char *name, int rev);
 
 /*
 ** for 32
 */
 
-char                            *check_if_own_archi_32(t_univ_bin *univ, int rev,\
+char					*check_if_own_archi_32(t_univ_bin *univ, int rev,\
 uint32_t *size_sub, uint32_t size);
 
-void                                    univ_bin_load_data_32(t_univ_bin *univ, char *ptr, char *name, int rev);
+void					univ_bin_load_data_32(t_univ_bin *univ,\
+		char *ptr, char *name, int rev);
 
 #endif

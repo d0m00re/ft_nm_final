@@ -30,21 +30,16 @@ t_ctr_consis *consis, struct symtab_command *sym, int rev)
 	return (0);
 }
 
-#include <stdio.h>
-
 static void					check_segment_validity(\
 t_ctr_consis *consis, struct load_command *lc, int rev)
 {
 	unsigned int			i;
 	struct segment_command	*sc;
-	struct section			*s32;
 
 	i = 0;
 	sc = (void *)lc;
-	if (swap32_if(sc->fileoff, rev) > consis->size_file)//swap32_if(sc->fileoff, rev) + sizeof(*sc) + sizeof(*s32) * swap32_if(sc->nsects, rev) >= consis->size_file)
-	{
+	if (swap32_if(sc->fileoff, rev) > consis->size_file)
 		consis->error = 5;
-	}
 }
 
 static int					check_header_validity(t_ctr_consis *consis,\

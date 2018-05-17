@@ -34,32 +34,15 @@ void				nm(char *ptr, char *name_file, unsigned int size)
 	else if (magic == MH_CIGAM_64)
 		nm_r_64(ptr);
 	else if (magic == MH_CIGAM)
-	{
 		nm_r_32(ptr);
-	}
 	else if (magic == FAT_MAGIC)
-	{
-		while (1)
-			ft_putstr("john32");
 		nm_fat_32(ptr, name_file, 0, size);
-	}
 	else if (magic == FAT_CIGAM)
-	{
-		//while (1){ft_putstr("Salope");}
 		nm_fat_32(ptr, name_file, 1, size);
-	}
 	else if (magic == FAT_MAGIC_64)
-	{
-		while(1)
-			ft_putstr("coucou64");
 		nm_fat_64(ptr, name_file, 0, size);
-	}
 	else if (magic == FAT_CIGAM_64)
-	{
-		while(1)
-                        ft_putstr("coucou46");
 		nm_fat_64(ptr, name_file, 1, size);
-	}
 	else
 	{
 		ft_putstr(name_file);

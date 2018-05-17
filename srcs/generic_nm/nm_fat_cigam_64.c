@@ -6,7 +6,7 @@
 /*   By: alhelson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 18:37:18 by alhelson          #+#    #+#             */
-/*   Updated: 2018/04/15 14:48:12 by alhelson         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:13:18 by alhelson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ struct fat_arch_64 *f, int rev)
 ** si le x86 est present on retounre son adresse sinon 0
 */
 
-char						*check_if_own_archi_64(t_univ_bin *univ, int rev,\
-uint32_t *size_sub, uint32_t size)
+char							*check_if_own_archi_64(t_univ_bin *univ,\
+int rev, uint32_t *size_sub, uint32_t size)
 {
 	int							c;
 	struct fat_arch_64			*fa;
@@ -87,7 +87,8 @@ char *ptr, int rev, unsigned int size)
 	}
 }
 
-void							univ_bin_load_data_64(t_univ_bin *univ, char *ptr, char *name, int rev)
+void							univ_bin_load_data_64(t_univ_bin *univ,\
+		char *ptr, char *name, int rev)
 {
 	univ->ptr = ptr;
 	univ->name = name;

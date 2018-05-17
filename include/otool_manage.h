@@ -6,7 +6,7 @@
 /*   By: alhelson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 19:24:23 by alhelson          #+#    #+#             */
-/*   Updated: 2018/04/02 19:24:34 by alhelson         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:31:48 by alhelson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void fat_otool_64(char *ptr, char *name_file, int rev);
 
 void otool(char *ptr, char *name_file, unsigned int is_dis_arch);
 
-void    display_cpu(char *name, int cpu_type);
+void display_cpu(char *name, int cpu_type);
 
 #endif

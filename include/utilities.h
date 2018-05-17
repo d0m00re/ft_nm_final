@@ -39,6 +39,7 @@ void			ft_putchar(char c);
 
 void			ft_putstr(char *str);
 void			ft_putstr_limit(char *str, char *end);
+void			ft_putstr2(char *str, char *str2);
 
 void			ft_putstr_same_char(char c, unsigned int rep);
 

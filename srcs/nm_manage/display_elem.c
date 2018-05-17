@@ -40,10 +40,12 @@ void	display_elem_32(t_nm_elem *elem)
 	if (elem->n_value || elem->c == 't' || elem->c == 'T' || elem->c == '?')
 	{
 		if (elem->n_value)
+		{
 			ft_putstr_same_char('0', 8 - nb_digit_buint64(elem->n_value));
+			ft_putnbr_base_ui64(elem->n_value, 16);
+		}
 		else
-			ft_putstr_same_char('0', 8);
-		ft_putnbr_base_ui64(elem->n_value, 16);
+			ft_putstr_same_char('0', 8 - nb_digit_buint64(elem->n_value));
 		ft_putchar(' ');
 	}
 	else

@@ -20,7 +20,8 @@ t_elem_arch			*init_elem_arch(int size_max)
 	c = 0;
 	if (!(elem = malloc(sizeof(t_elem_arch))))
 		return (0);
-	elem->type = malloc(sizeof(int) * size_max);
+	if (!(elem->type = malloc(sizeof(int) * size_max)))
+		return (0);
 	while (c < size_max)
 	{
 		elem->type[c] = 0;

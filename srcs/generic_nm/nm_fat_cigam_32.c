@@ -6,7 +6,7 @@
 /*   By: alhelson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/31 15:02:24 by alhelson          #+#    #+#             */
-/*   Updated: 2018/04/15 00:05:04 by alhelson         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:12:40 by alhelson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void				generate_arch(t_univ_bin *univ, int rev)
 	count_nb_diff_arch(univ->arch_desc);
 }
 
-char				*check_if_own_archi_32(t_univ_bin *univ, int rev,\
+char					*check_if_own_archi_32(t_univ_bin *univ, int rev,\
 uint32_t *size_sub, uint32_t size)
 {
 	int					c;
@@ -80,7 +80,8 @@ static void				manage_all_architecture(t_univ_bin univ,\
 	}
 }
 
-void					univ_bin_load_data_32(t_univ_bin *univ, char *ptr, char *name, int rev)
+void					univ_bin_load_data_32(t_univ_bin *univ,\
+char *ptr, char *name, int rev)
 {
 	univ->ptr = ptr;
 	univ->name = name;

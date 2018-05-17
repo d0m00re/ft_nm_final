@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   display_cpu_otool.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alhelson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/17 17:19:52 by alhelson          #+#    #+#             */
+/*   Updated: 2018/05/17 17:19:52 by alhelson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "otool_manage.h"
 #include <mach-o/fat.h>
 #include "utilities.h"
 
-void    display_cpu(char *name, int cpu_type)
+void	display_cpu(char *name, int cpu_type)
 {
 	ft_putstr(name);
 	if (cpu_type == CPU_TYPE_POWERPC)

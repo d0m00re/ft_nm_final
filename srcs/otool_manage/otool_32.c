@@ -49,8 +49,6 @@ static void					basic_init(uint64_t *a, uint64_t *b)
 	*b = 0;
 }
 
-
-
 static void					fucking_display2(char *ptr, uint64_t addr,\
 uint32_t offset, uint64_t size)
 {
@@ -65,7 +63,7 @@ uint32_t offset, uint64_t size)
 			ft_putchar('\n');
 		if (c % 16 == 0)
 		{
-			c_tmp = 1;		
+			c_tmp = 1;
 			ft_putstr_same_char('0', 8 - nb_digit_buint64(addr + c));
 			ft_putnbr_base_ui64(addr + c, 16);
 			ft_putchar('\t');
@@ -108,7 +106,8 @@ struct load_command *lc, int rev)
 	}
 }
 
-void						otool_32(char *ptr, int rev, char *name_file, unsigned int is_dis_arch)
+void						otool_32(char *ptr, int rev,\
+char *name_file, unsigned int is_dis_arch)
 {
 	unsigned int			i;
 	struct mach_header		*header;
@@ -125,10 +124,7 @@ void						otool_32(char *ptr, int rev, char *name_file, unsigned int is_dis_arch
 	if (is_dis_arch)
 		display_cpu(name_file, is_dis_arch);
 	else
-	{
-		ft_putstr(name_file);
-		ft_putstr(":\n");
-	}
+		ft_putstr2(name_file, ":\n");
 	ft_putstr("Contents of (__TEXT,__text) section\n");
 	while (i < swap32_if(header->ncmds, rev))
 	{

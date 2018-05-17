@@ -106,12 +106,14 @@ swap32_if(s64->offset, rev), swap64_if(s64->size, rev));
 	}
 }
 
-void							otool_64(char *ptr, int rev, char *name_file, unsigned int is_dis_arch)
+void							otool_64(char *ptr, int rev,\
+char *name_file, unsigned int is_dis_arch)
 {
 	unsigned int				i;
 	struct mach_header_64		*header;
 	struct load_command			*lc;
 
+	is_dis_arch = 0;
 	if (main_checker(ptr, get_testouille() - ptr))
 	{
 		ft_error_file("./ft_otool", " : .", " : corruted file\n");
